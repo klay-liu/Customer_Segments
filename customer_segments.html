@@ -13507,7 +13507,7 @@ div#notebook {
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>&lt;matplotlib.axes._subplots.AxesSubplot at 0x7f89801b58d0&gt;</pre>
+<pre>&lt;matplotlib.axes._subplots.AxesSubplot at 0x7fb136db8780&gt;</pre>
 </div>
 
 </div>
@@ -13886,7 +13886,7 @@ The feature importance with Delicatessen is [ 0.13554885  0.34124971  0.03639388
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>&lt;matplotlib.axes._subplots.AxesSubplot at 0x7f89770b18d0&gt;</pre>
+<pre>&lt;matplotlib.axes._subplots.AxesSubplot at 0x7fb131d52d30&gt;</pre>
 </div>
 
 </div>
@@ -15030,8 +15030,8 @@ The feature importance with Delicatessen is [ 0.13554885  0.34124971  0.03639388
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><strong>回答:</strong>
-多于一个特征下被看作是异常的数据点为65, 66, 75,128, 154，这些点应被删除。K-Means对异常数据非常敏感，应将异常值等作为噪音剔除。</p>
+<p><strong>回答:</strong></p>
+<p>数据点65, 66, 75,128, 154等5个点应该被看作异常点，这些点应被删除，因为它们出现在多个特征中。总共找到42个异常值，约占数据集10%左右，全部删除可能会扭曲数据集，从而导致重要信息的丢失。</p>
 
 </div>
 </div>
@@ -15108,7 +15108,7 @@ The feature importance with Delicatessen is [ 0.13554885  0.34124971  0.03639388
 <div class="prompt input_prompt">In&nbsp;[16]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">pca_results</span><span class="o">.</span><span class="n">T</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">display</span><span class="p">(</span><span class="n">pca_results</span><span class="o">.</span><span class="n">T</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -15121,11 +15121,11 @@ The feature importance with Delicatessen is [ 0.13554885  0.34124971  0.03639388
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[16]:</div>
+    <div class="prompt"></div>
 
 
 
-<div class="output_html rendered_html output_subarea output_execute_result">
+<div class="output_html rendered_html output_subarea ">
 <div>
 <style scoped>
     .dataframe tbody tr th:only-of-type {
@@ -15247,9 +15247,9 @@ The feature importance with Delicatessen is [ 0.13554885  0.34124971  0.03639388
 <p><strong>回答:</strong>
 数据的第一个和第二个主成分总共方差为0.7068；
 前四个主成分总方差为0.9311。</p>
-<p>第一个主成分跟Detergents_Paper,Grocery,Milk具有较大的负关联，此成分可能是熟食店；</p>
-<p>第二个主成分跟Fresh,Frozen,Delicatessen具有较大的负关联，此成分可能是咖啡店；</p>
-<p>第三个主成分跟Fresh具有较大的负相关，跟Delicatessen具有较大的正关联，此成分可能是熟食店</p>
+<p>第一个主成分中，Detergents_Paper，Grocery,Milk的权重分别是-0.7514，-0.4381,-0.4014，说明洗涤剂，杂货和牛奶对该主成分的影响较大，洗涤剂、杂货和牛奶的减少与该主成分的增加呈强相关，此主成分可能是杂货店；</p>
+<p>第二个主成分中，Fresh,Frozen,Delicatessen的权重分别是-0.6859，-0.5005，-0.4941，它们对第二个主成分影响较大，跟该主成分具有较大的负关联。生鲜，冷冻产品和熟食的减少与该主成分的增加呈强相关，此主成分可能是咖啡店；</p>
+<p>第三个主成分中，Fresh，Delicatessen和Frozen的权重分别是-0.6774，0.6286，0.3150。该主成分与生鲜呈负相关，与熟食和冷冻产品呈正相关。此主成分可能是熟食店。</p>
 
 </div>
 </div>
@@ -15504,7 +15504,7 @@ The feature importance with Delicatessen is [ 0.13554885  0.34124971  0.03639388
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>&lt;matplotlib.axes._subplots.AxesSubplot at 0x7f897dcff8d0&gt;</pre>
+<pre>&lt;matplotlib.axes._subplots.AxesSubplot at 0x7fb1347f0940&gt;</pre>
 </div>
 
 </div>
@@ -15893,7 +15893,7 @@ when n_components is 2, the silhouette score is 0.42191684646261485
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>&lt;matplotlib.axes._subplots.AxesSubplot at 0x7f897dc2dfd0&gt;</pre>
+<pre>&lt;matplotlib.axes._subplots.AxesSubplot at 0x7fb1347c2630&gt;</pre>
 </div>
 
 </div>
